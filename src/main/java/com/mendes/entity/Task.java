@@ -13,20 +13,20 @@ import java.io.Serializable;
  */
 
 @Document
-public class User implements Serializable {
+public class Task implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationStrategy.UNIQUE)
     private Long id;
 
     @Field
-    private String name;
+    private String title;
 
     @Field
-    private String surname;
+    private String description;
 
     @Field
-    private String username;
+    private User user;
 
     public Long getId() {
         return id;
@@ -36,27 +36,27 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getDescription() {
+        return description;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getUsername() {
-        return username;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUser(User user) {
+        this.user = user;
     }
 }
